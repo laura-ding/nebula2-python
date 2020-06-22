@@ -11,7 +11,7 @@ from thrift.transport import TSocket
 from thrift.transport import TTransport
 from thrift.protocol import TBinaryProtocol
 
-from graph import GraphService
+from nebula2.graph import GraphService
 
 
 class ConnectionPool(object):

@@ -12,7 +12,7 @@ from thrift.Thrift import *
 from thrift.protocol.TProtocol import TProtocolException
 
 
-import common.ttypes
+import nebula2.common.ttypes
 
 
 import pprint
@@ -115,7 +115,7 @@ class ExecutionResponse:
           iprot.skip(ftype)
       elif fid == 3:
         if ftype == TType.STRUCT:
-          self.data = common.ttypes.DataSet()
+          self.data = nebula2.common.ttypes.DataSet()
           self.data.read(iprot)
         else:
           iprot.skip(ftype)
@@ -328,7 +328,7 @@ ExecutionResponse.thrift_spec = (
   None, # 0
   (1, TType.I32, 'error_code', ErrorCode, None, 0, ), # 1
   (2, TType.I32, 'latency_in_us', None, None, 0, ), # 2
-  (3, TType.STRUCT, 'data', [common.ttypes.DataSet, common.ttypes.DataSet.thrift_spec, False], None, 1, ), # 3
+  (3, TType.STRUCT, 'data', [nebula2.common.ttypes.DataSet, nebula2.common.ttypes.DataSet.thrift_spec, False], None, 1, ), # 3
   (4, TType.STRING, 'space_name', False, None, 1, ), # 4
   (5, TType.STRING, 'error_msg', False, None, 1, ), # 5
 )
